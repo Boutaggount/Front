@@ -1,0 +1,36 @@
+
+.ligne_verticale
+{
+width:5px;
+border-left:1px solid gray;
+height:50px;
+margin: 16px;
+}
+.card {
+  background-image: url("../../assets/60.jpg");
+  width: 400px;
+  margin: 5px;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}

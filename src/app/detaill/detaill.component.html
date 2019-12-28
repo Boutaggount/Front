@@ -1,0 +1,117 @@
+
+<div class="all">   
+    <div class="row m-auto text-center w-75" style="width: 600px" *ngIf="getV()==false">
+        <div class="col-4 princing-item blue" style="width: 600px" >
+            <div class="pricing-divider "  style="width: 400px">
+                <h3 class="text-light">{{tab.intitule}}</h3>
+                <P style="color: aliceblue;">({{tab.theme}})</P>
+                <P style="color: aliceblue;">{{tab.description}}</P>
+                <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1'
+                    preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px'
+                    xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'
+                    y='0px'>
+                    <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+  c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                    <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+  c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                    <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+  H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                    <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+  c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                </svg>
+            </div>
+            <div class="card-body bg-white mt-0 shadow" style="width: 400px">
+                
+                <ul class="list-unstyled mb-5 position-relative">
+                    <li><b>date debut  : </b>{{tab.date_debut}}</li>
+                    <li><b>date fin : </b> {{tab.date_fin}}</li>
+                    <li><b>ville : </b>{{tab.ville}}</li>
+                    <li><b>Etablisement : </b>{{tab.etablisement}}</li>
+                    <li><b>adress :</b>{{tab.address}}</li>
+                    <li><b>capacite :</b>{{tab.capacite}}</li>
+                </ul>
+                <div *ngIf="isAdmin()">
+                <table align="center">
+                    <tr>
+                        <td>
+                            
+                                <button mat-button (click)="update()" >
+                                    <i class="material-icons" style="font-size: 40px;">edit</i>Modifier
+                                </button>
+                        </td>
+                        <td>
+                            <button mat-button (click)="confirm()" >
+                                <i class="material-icons" style="font-size: 40px;">delete_forever</i> Supprimer
+                            </button>
+                        </td>
+                   
+                    </tr>
+                </table>
+            </div >
+                <br><br>
+                <div *ngIf="isAdmin()==false">
+                <button type="button" (click)="participer()" class="btn btn-lg btn-block  btn-custom ">participer</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<div *ngIf="getV()==true">
+    <h2 style="align-items: center;">Modification d'un  Hackathone</h2>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="row">
+          <div class="col-50">
+            <h3>Les information d'événement </h3>
+            <label for="fname"><i class="fa fa-user"></i> intitule</label>
+            <input [(ngModel)]="tab.intitule" type="text" id="fname" name="intitule" placeholder="intitule" >
+            <label  for="email"><i class="fa fa-envelope"></i> Description</label>
+            <input [(ngModel)]="tab.description" ngModel type="text" id="email" name="Description" placeholder="Description"  >
+            <label  for="adr"><i class="fa fa-address-card-o"></i> theme</label>
+            <input [(ngModel)]="tab.theme" type="text" id="adr" name="theme" placeholder="theme" >
+            <label for="city"><i class="fa fa-institution"></i> Capacite</label>
+            <input [(ngModel)]="tab.capacite" type="text" id="city" name="Capacite" placeholder="Capacite" >
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">Date debut</label>
+                <input [(ngModel)]="tab.date_debut" type="date" id="state" name="Datedebut" placeholder="Date debut" >
+              </div>
+              <div class="col-50">
+                <label for="zip">Date Fin</label>
+                <input [(ngModel)]="tab.date_fin" type="date" id="zip" name="DateFin" placeholder="Date Fin">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Les information du lieu</h3>
+            
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Ville</label>
+            <input [(ngModel)]="tab.ville"  type="text" id="cname" name="Ville" placeholder="Ville"  >
+            <label for="ccnum">Etablisement</label>
+            <input  [(ngModel)]="tab.etablisement" type="text" id="ccnum" name="Etablisement" placeholder="Etablisement" >
+            <label for="expmonth">address</label>
+            <input [(ngModel)]="tab.address" type="text" id="expmonth" name="address" placeholder="address">
+            
+          </div>
+          
+        </div>
+                <input type="submit" value="Entregistrer" class="btn">
+      </form>
+    </div>
+   
+  </div>
+
+</div>
+</div>
+</div>

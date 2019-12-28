@@ -1,0 +1,37 @@
+
+<h2 style="text-align:center">Touts les evenement</h2>
+
+<table>
+  <tr>
+    <td>
+        <div class="form-inline my-2 my-lg-0"> 
+            <input [(ngModel)]="Rville" class="form-control mr-sm-2" type="text" placeholder="chercher par ville" aria-label="Search"/>
+            <button value="filter" class="btn btn-outline-success my-2 my-sm-0" (click)="chercherVille()">recherche</button>
+          </div>
+    </td>
+    <td>
+        <div class="ligne_verticale"></div>
+    </td>
+    <td>
+        <div class="form-inline my-2 my-lg-0"> 
+            <input [(ngModel)]="Rtheme" class="form-control mr-sm-2" type="text" placeholder="chercher par theme" aria-label="Search"/>
+            <button value="filter" class="btn btn-outline-success my-2 my-sm-0" (click)="chercherTheme()">recherche</button>
+          </div>
+    </td>
+  </tr>
+</table>
+
+
+<div  class="row" >
+  <div class="card" *ngFor="let a of tab ">      
+          <h1>{{a.intitule}}</h1>
+          <p class="price">{{a.ville}}</p>
+          <p>{{a.description}}</p>
+          <p><button (click)="affDet(a)">plus de Detail</button></p>
+        </div>
+</div>
+
+
+
+  
+
