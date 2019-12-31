@@ -23,6 +23,7 @@ import { DialogExComponent } from './dialog-ex/dialog-ex.component';
 import { NewMembreComponent } from './new-membre/new-membre.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { TestComponent } from './test/test.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { TestComponent } from './test/test.component';
     DialogExComponent,
     NewMembreComponent,
     UpdateEventComponent,
+    IndexComponent,
     TestComponent
   ],
   entryComponents:[
@@ -55,7 +57,8 @@ import { TestComponent } from './test/test.component';
     MatDialogModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FullCalendarModule
   ],
   providers: [GestionHackatonService,MemberService,AuthentificationService,AdminService],
   bootstrap: [AppComponent]
