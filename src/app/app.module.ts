@@ -24,7 +24,8 @@ import { NewMembreComponent } from './new-membre/new-membre.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { TestComponent } from './test/test.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
-
+import { StatistiquesComponent } from './statistiques/statistiques.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     NewMembreComponent,
     UpdateEventComponent,
     IndexComponent,
-    TestComponent
+    TestComponent,
+    StatistiquesComponent
   ],
   entryComponents:[
     NewMembreComponent,
@@ -58,6 +60,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
+    ChartsModule,
     FullCalendarModule
   ],
   providers: [GestionHackatonService,MemberService,AuthentificationService,AdminService],
