@@ -19,13 +19,7 @@
                   Listes des événement
               </a>
       </li>
-      
-      <li class="nav-item" *ngIf="isAdmin()">
-        <a routerLink="/newEvent" class="nav-link text-dark font-italic ">
-                  <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                  Creer evenement 
-              </a>
-      </li>
+
    
       <li class="nav-item">
         <a routerLink="historique" class="nav-link text-dark font-italic">
@@ -33,41 +27,29 @@
                   historique
               </a>
       </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
-                  <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
-                  Titre
-              </a>
-      </li>
+   
     </ul>
-  
-    <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Titre</p>
-  
+    <br><br>
+    <div *ngIf="isAdmin()">
+    <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Admin</p>
     <ul class="nav flex-column bg-white mb-0">
+
+      
       <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
-                  <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
-                  titre
+        <a routerLink="/newEvent" class="nav-link text-dark font-italic ">
+                  <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                  Creer evenement 
               </a>
       </li>
+   
       <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
-                  <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-                 titre
+        <a routerLink="/gererEquipes" class="nav-link text-dark font-italic">
+                  <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                  gerer les equipe
               </a>
       </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
-                  <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
-                  titre
-              </a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
-                  <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
-                 titre
-              </a>
-      </li>
+   
     </ul>
+  </div>
   </div>
   <!-- End vertical navbar -->

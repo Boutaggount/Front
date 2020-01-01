@@ -36,7 +36,7 @@ export class AuthentificationComponent implements OnInit {
         if(this.members[i].login==this.nom && this.members[i].pwd==this.mdp){
           a=2;
           sessionStorage.setItem('type',"membre");
-          sessionStorage.setItem('id_membre',this.members[i].id_admin.toString())
+          sessionStorage.setItem('id_membre',this.members[i].id_mem.toString())
           sessionStorage.setItem('nom',this.members[i].login.toString())
           this.dialog.closeAll();
         }
@@ -51,6 +51,7 @@ export class AuthentificationComponent implements OnInit {
           a=2;
          // this._Athen.connect(this.nom,"A");
          sessionStorage.setItem('type',"admin");
+         sessionStorage.setItem('id_admin',this.admins[i].id_admin.toString())
          sessionStorage.setItem('nom',this.admins[i].login.toString())
          this.dialog.closeAll();
         }

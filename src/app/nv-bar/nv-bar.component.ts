@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms'
+
 import { Router } from '@angular/router';
 
 import { AuthentificationComponent } from '../authentification/authentification.component';
-import { MatDialog, MatDialogConfig } from "@angular/material";
+import { MatDialog } from "@angular/material";
 
 import { NewMembreComponent } from '../new-membre/new-membre.component';
 import { AuthentificationService } from '../Services/authentification.service';
@@ -46,9 +46,9 @@ export class NvBarComponent implements OnInit {
     this.nom="";
   }
   logname(){
-    if(this.nom!="")
-    return true;
-    else return false;
+    if(this.nom==""){
+    return false;}
+    else {return true;}
   }
 
 }

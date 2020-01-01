@@ -23,6 +23,8 @@ import { DialogExComponent } from './dialog-ex/dialog-ex.component';
 import { NewMembreComponent } from './new-membre/new-membre.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { TestComponent } from './test/test.component';
+import { MonTestComponent } from './mon-test/mon-test.component';
+import { GererEquipesComponent } from './gerer-equipes/gerer-equipes.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { TestComponent } from './test/test.component';
     DialogExComponent,
     NewMembreComponent,
     UpdateEventComponent,
-    TestComponent
+    TestComponent,
+    MonTestComponent,
+    GererEquipesComponent
   ],
   entryComponents:[
     NewMembreComponent,

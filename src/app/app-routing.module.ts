@@ -7,6 +7,10 @@ import {DetaillComponent} from '../app/detaill/detaill.component'
 import {AuthentificationComponent} from '../app/authentification/authentification.component'
 import { DialogExComponent } from './dialog-ex/dialog-ex.component';
 import {TestComponent} from'./test/test.component'
+import {GererEquipesComponent} from './gerer-equipes/gerer-equipes.component'
+import {MonTestComponent} from './mon-test/mon-test.component'
+
+
 
 
 
@@ -18,7 +22,9 @@ const routes: Routes = [
   {path:'detaill',component:DetaillComponent},
   {path:'login',component:AuthentificationComponent},
   {path:'test',component:DialogExComponent},
-  {path:'mm',component:TestComponent}
+  {path:'gererEquipes',component:GererEquipesComponent},
+  {path:'mm',component:TestComponent},
+  {path:'tt',component:MonTestComponent}
  
 ];
 

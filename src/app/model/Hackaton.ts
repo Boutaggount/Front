@@ -3,12 +3,13 @@ export class Hackaton{
     intitule:String;
     description:String;
     theme:String;
-	capacite:String;
+	capacite:number;
 	date_debut:Date;
 	date_fin:Date;
 	ville:String
 	etablisement:String;
 	address:String;
+	nbr:number;
     
 
 }

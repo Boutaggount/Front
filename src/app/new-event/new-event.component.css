@@ -1,4 +1,6 @@
-
+.all{
+	background-image: url("../../assets/60.jpg");
+}
 .row {
 	display: -ms-flexbox; /* IE10 */
 	display: flex;

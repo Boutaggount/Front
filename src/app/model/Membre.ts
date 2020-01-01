@@ -1,11 +1,11 @@
 export class Membre{
-    id_admin:Number; 
+    id_mem:Number; 
     prenom:String;
     nom:String;
     adresse:String;
     email:String;
     num:String;
-    login:String;
+    login:string;
     pwd:String;
     qust:String;
     rep:String;
