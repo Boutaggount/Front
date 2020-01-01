@@ -1,41 +1,28 @@
-<div class="all">
-<div class="timeline">
-        <div class="container left">
-          <div class="content">
-            <h4>2017</h4>
-            <p>discription</p>
+
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">              
+          <div class="card-body">
+              <full-calendar
+              #calendar
+              defaultView="dayGridMonth"
+              [header]="{
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+              }"
+              [plugins]="calendarPlugins"
+              [weekends]="calendarWeekends"
+              [(events)]="calendarEvents"
+              (dateClick)="handleDateClick($event)"
+              (eventClick)="handleEventClick($event)"
+            ></full-calendar>
           </div>
         </div>
-        <div class="container right">
-          <div class="content">
-            <h2>2016</h2>
-            <p>discription</p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <h2>2015</h2>
-            <p>discription</p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <h2>2012</h2>
-            <p>discription</p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <h2>2011</h2>
-            <p>discription</p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <h2>2007</h2>
-            <p>discription</p>
-          </div>
-        </div>
-      </div>
-      
+      </div>            
     </div>
+  </div>
+</div>
