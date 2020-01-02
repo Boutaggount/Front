@@ -23,15 +23,12 @@ import { DialogExComponent } from './dialog-ex/dialog-ex.component';
 import { NewMembreComponent } from './new-membre/new-membre.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { TestComponent } from './test/test.component';
-<<<<<<< HEAD
 import { MonTestComponent } from './mon-test/mon-test.component';
 import { GererEquipesComponent } from './gerer-equipes/gerer-equipes.component';
 
-=======
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ChartsModule } from 'ng2-charts';
->>>>>>> 57149b1ef50255073deb8f00e96ca7e4ce9f1dfa
 
 @NgModule({
   declarations: [
@@ -47,15 +44,12 @@ import { ChartsModule } from 'ng2-charts';
     DialogExComponent,
     NewMembreComponent,
     UpdateEventComponent,
-<<<<<<< HEAD
     TestComponent,
     MonTestComponent,
-    GererEquipesComponent
-=======
+    GererEquipesComponent,
     IndexComponent,
     TestComponent,
     StatistiquesComponent
->>>>>>> 57149b1ef50255073deb8f00e96ca7e4ce9f1dfa
   ],
   entryComponents:[
     NewMembreComponent,

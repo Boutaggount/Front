@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './statistiques.component.html',
   styleUrls: ['./statistiques.component.css']
 })
-export class StatistiquesComponent implements OnInit {
+export class StatistiquesComponent implements OnInit{
 
   constructor() { }
 
@@ -13,12 +13,12 @@ export class StatistiquesComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartLabels = ['Hackaton1', 'Hackaton2','Hackaton3','Hackaton4','Hackaton5','Hackaton4','Hackaton5'];
   public barChartType = 'bar';
   public barChartLegend = true;
   public barChartData = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Hommes'},
+    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Femmes'}
   ];
 
   ngOnInit() {

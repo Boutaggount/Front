@@ -28,6 +28,7 @@ export class GestionHackatonService {
 
     return this._http.get(this.baseUrl + '' + id);
   }
+  
   add(hack: Hackaton) {
     
     this._http.post(this.baseUrl + 'save', JSON.parse(JSON.stringify(hack))

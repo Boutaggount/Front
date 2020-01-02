@@ -7,14 +7,11 @@ import {DetaillComponent} from '../app/detaill/detaill.component'
 import {AuthentificationComponent} from '../app/authentification/authentification.component'
 import { DialogExComponent } from './dialog-ex/dialog-ex.component';
 import {TestComponent} from'./test/test.component'
-<<<<<<< HEAD
 import {GererEquipesComponent} from './gerer-equipes/gerer-equipes.component'
 import {MonTestComponent} from './mon-test/mon-test.component'
 
 
-=======
 import { StatistiquesComponent } from './statistiques/statistiques.component';
->>>>>>> 57149b1ef50255073deb8f00e96ca7e4ce9f1dfa
 
 
 
