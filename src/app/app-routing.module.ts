@@ -12,6 +12,10 @@ import {MonTestComponent} from './mon-test/mon-test.component'
 import {StatistiquesComponent} from './statistiques/statistiques.component'
 
 
+<<<<<<< HEAD
+=======
+import { StatistiquesComponent } from './statistiques/statistiques.component';
+>>>>>>> fb8b63f433ed406069b67718c0852333325de31d
 
 
 
