@@ -36,7 +36,17 @@ export class GestionHackatonService {
       let params = new HttpParams().set("evnt", response).set("id_Admin", sessionStorage.getItem('id_admin'));
       this._http.post(this.baseUrl + 'save2', params
       ).subscribe(response => { });
+      
     });
+    
+  }
+  update(hack: Hackaton) {
+    
+    this._http.post(this.baseUrl + 'update', JSON.parse(JSON.stringify(hack))
+    ).subscribe(() => {});
+    
+  }
+  changeEtat(){
 
   }
   participer(a: string, b: string) {
@@ -66,4 +76,5 @@ export class GestionHackatonService {
     console.log("llll")
     return this._http.get(this.baseUrl + 'listmembers/'+id);
   }
+
 }

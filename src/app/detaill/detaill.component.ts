@@ -76,7 +76,7 @@ export class DetaillComponent implements OnInit {
   }
   */
  onSubmit(f:NgForm){
-  this._serv.add(this.tab);
+  this._serv.update(this.tab);
   this.var=false
 }
 test(){

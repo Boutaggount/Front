@@ -14,7 +14,9 @@ export class GererEquipesComponent implements OnInit {
   private var:string="20px"
   private maList:Hackaton[];
   private monHack:Hackaton;
+  
   private testD:Number=0;
+  private testCA:Number=0;
   private pourcentage:number;
   private nbrParticip:number;
   private perParEquip:number;
@@ -23,9 +25,11 @@ export class GererEquipesComponent implements OnInit {
   private numbersP;
   private membres:Membre[];
   private membre:Membre;
+  private equipes:equipe[];
   constructor(private render: Renderer2,private _serv:GestionHackatonService,private _servE:EquipeService) { }
  
   ngOnInit() {
+ 
     this._serv.MaListEvent(1).subscribe(
       (data: Hackaton[]) => {
         this.maList = data;
@@ -39,10 +43,7 @@ export class GererEquipesComponent implements OnInit {
     this._serv.getId(d).subscribe(
       (data: Hackaton) => {
         this.monHack = data;
-        sessionStorage.setItem('id_hack',this.monHack.id.toString());
-
-       
-        
+        sessionStorage.setItem('id_hack',this.monHack.id.toString()); 
       }
       );
    
@@ -55,17 +56,74 @@ export class GererEquipesComponent implements OnInit {
           el.style.width = this.var;
       }
     );
-    
-    
   }
+
   test():boolean{
     if(this.testD==0){return false}
     else return true;
   }
 
+  testC():boolean{
+    if(this.testCA==0){return false}
+    else return true;
+  }
+
+
+
+  creerEquips(){
+    this.testCA=1;
+    this.numbersE = Array(this.monHack.nbr).fill(0).map((x,i)=>i);
+    this.perParEquip=this.monHack.capacite/this.monHack.nbr;
+    this.numbersP = Array(this.monHack.capacite/this.monHack.nbr).fill(0).map((x,i)=>i);
+    if(this.monHack.eqestcreer==false){
+      this.creer();
+    }
+    else{this.afficher()}
+  }
+  creer(){
+    this._serv.listmembers(this.monHack.id).subscribe(
+      (data: Membre[]) => {
+        this.membres=data
+        let tab:string[]=[];
+      for(var i=0;i<this.monHack.nbr;i++){
+        let a:string=this.makeString();
+        this.equipe=new equipe;
+        this.equipe.nom=a;
+        for(var j=0;j<this.perParEquip;j++){
+          let m:string=this.gerermembers();   
+          tab.push(m);       
+        }
+        this._servE.add(this.equipe,tab,this.perParEquip)
+        tab=[]
+        
+      }
+      this.monHack.eqestcreer=true;
+      this._serv.update(this.monHack)
+    }
+    );
+
+      
+  }
+ 
+    
+  
+  afficher(){
+    this.testCA=1
+    this._servE.mesEquipe(this.monHack.id).subscribe((response:equipe[]) => {
+      this.equipes=response 
+      for(var i=0;i<this.monHack.capacite;i++){
+        
+      }
+      
+    } );
+  }
+
+
+
+
   makeString(): string {
     let outString: string = '';
-    let inOptions: string = 'abcdefghijklmnopqrstuvwxyz';
+    let inOptions: string = 'QWERTYUIOPLKJHGFDSAZXCVBNM';
     outString += inOptions.charAt(Math.floor(Math.random() * inOptions.length));
     outString += inOptions.charAt(Math.floor(Math.random() * inOptions.length));
     return outString;
@@ -78,37 +136,6 @@ export class GererEquipesComponent implements OnInit {
     this.membres.splice(0,1);
     return ""+this.membre.id_mem;
   
-    } else return "vide"
-  
- 
-    
+    } else return "vide"  
   }
-  creerEquips(){
-    //this.creer==true;
-    this.numbersE = Array(this.monHack.nbr).fill(0).map((x,i)=>i);
-    this.perParEquip=this.monHack.capacite/this.monHack.nbr;
-    this.numbersP = Array(this.monHack.capacite/this.monHack.nbr).fill(0).map((x,i)=>i);
-    this._serv.listmembers(this.monHack.id).subscribe(
-      (data: Membre[]) => {
-        
-        this.membres=data
-     
-      for(var i=0;i<this.monHack.nbr;i++){
-        let a:string=this.makeString();
-        this.equipe=new equipe;
-        this.equipe.nom=a;
-        
-        
-        this._servE.add(this.equipe)
-        
-          for(var j=0;j<this.perParEquip;j++){
-            let m:string=this.gerermembers();
-            console.log("**********") 
-            console.log(m)            
-            this._servE.addmember(m)      
-          }
-      }
-    }
-    );
-    }
 }

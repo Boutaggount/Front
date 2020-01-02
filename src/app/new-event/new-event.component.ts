@@ -32,6 +32,7 @@ export class NewEventComponent implements OnInit {
     this.hachaton.date_fin=f.value['DateFin'];
     this.hachaton.etablisement=f.value['Etablisement'];
     this.hachaton.nbr=f.value['nbrequipe'];
+    this.hachaton.eqestcreer=false;
     this._serv.add(this.hachaton);
     this._router.navigate(["listEvent"]);
 

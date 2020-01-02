@@ -11,21 +11,30 @@ export class EquipeService {
   private baseUrl: String = 'http://localhost:8090/equipes/';
   constructor(private _http: HttpClient, private _router: Router) { }
 
-  add(eq: equipe) {
+  add(eq: equipe,tab:string[],N:number) {
     
-    this._http.post(this.baseUrl + 'save', JSON.parse(JSON.stringify(eq))
-    ).subscribe((response: string) => { this.courantEq=response;
+  this._http.post(this.baseUrl + 'save', JSON.parse(JSON.stringify(eq))
+    ).subscribe((response:string) => {  
+      for(var i=0;i<N;i++){
+        this.addmember(tab[i],response)
+      }
       let params = new HttpParams().set("id_eq", response).set("id_hack", sessionStorage.getItem('id_hack'));
-      this._http.post(this.baseUrl + 'save2', params
-      ).subscribe(response => { });
+     this._http.post(this.baseUrl + 'save2', params
+      ).subscribe((response2:string) => { } );
+      
     });
+   
+    
   }
-  addmember(a:string){
-    console.log("**********") 
-            console.log(a) 
-    let params = new HttpParams().set("id_membre", a).set("id_eq",this.courantEq);
+
+  addmember(a:string,b:string){
+    
+    let params = new HttpParams().set("id_membre", a).set("id_eq",b);
       this._http.post(this.baseUrl + 'addmembre', params
       ).subscribe(response => { });
-    
+   
+  }
+  mesEquipe(id:Number){
+    return this._http.get(this.baseUrl + 'mesEquipe/'+id);
   }
 }

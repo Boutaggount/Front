@@ -10,6 +10,7 @@ export class Hackaton{
 	etablisement:String;
 	address:String;
 	nbr:number;
+	eqestcreer:boolean;
     
 
 }
