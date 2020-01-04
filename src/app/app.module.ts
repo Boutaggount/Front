@@ -29,6 +29,7 @@ import { GererEquipesComponent } from './gerer-equipes/gerer-equipes.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ChartsModule } from 'ng2-charts';
+import { MesEventComponent } from './mes-event/mes-event.component';
 
 @NgModule({
   declarations: [
@@ -47,10 +48,19 @@ import { ChartsModule } from 'ng2-charts';
     TestComponent,
     MonTestComponent,
     GererEquipesComponent,
+<<<<<<< HEAD
     StatistiquesComponent,
     
     IndexComponent,
     TestComponent
+=======
+ 
+    
+    IndexComponent,
+    TestComponent,
+    StatistiquesComponent,
+    MesEventComponent
+>>>>>>> f97842e2099ab5ad427e07975a4db3708629d5e7
   ],
   entryComponents:[
     NewMembreComponent,

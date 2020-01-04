@@ -15,8 +15,8 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <div *ngIf="logname()==true">
-        <table>
+      <div >
+        <table *ngIf="connected()">
           <tr>
             <td>
               <i class="material-icons" style="font-size: 40px;">account_circle</i>

@@ -37,4 +37,7 @@ export class EquipeService {
   mesEquipe(id:Number){
     return this._http.get(this.baseUrl + 'mesEquipe/'+id);
   }
+  membreParEquipes(id:Number){
+    return this._http.get(this.baseUrl + 'membreParEquipes/'+id);
+  }
 }
