@@ -45,11 +45,7 @@ export class NvBarComponent implements OnInit {
     this._router.navigate(['']);
     this.nom="";
   }
-  logname(){
-    if(this.nom==""){
-    return false;}
-    else {return true;}
-  }
+
 
 }
 

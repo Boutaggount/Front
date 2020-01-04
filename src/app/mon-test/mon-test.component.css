@@ -1,48 +1,39 @@
-.card {
-    background-image: url("../../assets/60.jpg");
-    width: 200px;
-    margin: 5px;
-    text-align: center;
-    font-family: arial;
-    position: relative;
-  }
-  
-  .price {
-    color: grey;
-    font-size: 22px;
-  }.one, .two, .three{
-    position:absolute;
-	margin-top:-10px;
-	z-index:1;
-	height:40px;
-	width:40px;
-	border-radius:25px;
-	
+.project-tab {
+    padding: 10%;
+    margin-top: -8%;
 }
-.one{
-	left:25%;
+.project-tab #tabs{
+    background: #007b5e;
+    color: #eee;
 }
-.two{
-	left:50%;
+.project-tab #tabs h6.section-title{
+    color: #eee;
 }
-.three{
-	left:75%;
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #0062cc;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
 }
-.primary-color{
-	background-color:#4989bd;
+.project-tab .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #0062cc;
+    font-size: 16px;
+    font-weight: 600;
 }
-.success-color{
-	background-color:#5cb85c;
+.project-tab .nav-link:hover {
+    border: none;
 }
-.danger-color{
-	background-color:#d9534f;
+.project-tab thead{
+    background: #f3f3f3;
+    color: #333;
 }
-.warning-color{
-	background-color:#f0ad4e;
-}
-.info-color{
-	background-color:#5bc0de;
-}
-.no-color{
-	background-color:inherit;
+.project-tab a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
 }

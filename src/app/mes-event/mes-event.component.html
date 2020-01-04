@@ -1,0 +1,200 @@
+<div class="head">
+
+</div>
+<br><br>
+<div class="row clearfix">
+    <div class="col-md-12 table-responsive">
+        <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        intitule
+                    </th>
+                    <th class="text-center">
+                        description
+                    </th>
+                    <th class="text-center">
+                        theme
+                    </th>
+                    <th class="text-center">
+                        date_debut
+                    </th>
+                    <th class="text-center">
+                        ville
+                    </th>
+
+                    <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id='addr0' data-id="0" class="hidden" *ngFor="let a of maList ">
+                    <td data-name="name">
+                        {{a.intitule}}
+                    </td>
+                    <td data-name="mail">
+                        {{a.description}}
+                    </td>
+                    <td data-name="desc">
+                        {{a.theme}}
+                    </td>
+                    <td data-name="sel">
+                        {{a.date_debut}}
+                    </td>
+                    <td data-name="sel">
+                        {{a.ville}}
+                    </td>
+                    <td data-name="del" style="width: 150px;">
+                        <button (click)="VoirAv(a.id)" name="del0"
+                            class='btn btn-danger glyphicon glyphicon-remove row-remove'><span
+                                aria-hidden="true">Avencemet des participation</span></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div *ngIf="test()">
+    <div class="row">
+        <div>
+            <table>
+                <tr>
+                    <td style="width: 250px;">
+                        Avencement des participation
+                    </td>
+                    <td style="width: 800px;">
+                        <div class="col-md-12">
+                            <div class="progress">
+                                <div class="one primary-color"></div>
+                                <div class="two primary-color"></div>
+                                <div class="three primary-color"></div>
+                                <div id="my_id" class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td id="pourcentage">
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <br><br>
+    <div class="row" style="margin-left: 40%;">
+        <table>
+            <tr>
+                <td>
+                    <button (click)="listParticip()" class="themeBtn4">Listes des participants</button>
+                </td>
+                <td style="width: 40px;"></td>
+                <td>
+                    <button (click)="gestionEquipe()" class="themeBtn4">gestion des equipes</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<div *ngIf="testParticip()">
+    <div class="row row-flex">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" style="margin-left: 36%;">
+            <div class="price-table pt-bg-blue">
+                <div>
+                    <span>List des members</span>
+
+                </div>
+                <ul>
+                    <li *ngFor="let mem of members">{{mem.login}}</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div *ngIf="testGestEquipe()">
+    <div *ngIf="EtatEv()">
+        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a *ngFor="let a of equipes" (click)="affEq(a.id_equipe)" class="nav-item nav-link active" id="nav-home-tab"
+                data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="false">
+                {{a.nom}}
+            </a>
+        </div>
+        <div *ngIf="testEq()">
+            <div class="row">
+                <table class="table" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>mail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let mem of members">
+                            <td>{{mem.login}}</td>
+                            <td>Dfrr</td>
+                            <td>test@example.com</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div *ngIf="!EtatEv()" >
+        <br>
+        <br>
+        <div class="container">
+            <table>
+                <tr>
+                    <td style="width: 1300px;">
+                        <div class="alert alert-info ">
+                            <strong>Info :</strong> les equipes ne sont pas encore Creer
+                        </div>
+                    </td>
+                    <td style="width: 200px;">
+
+                    </td>
+                    <td>
+                        <button mat-button (click)="Creer()" >
+                        <i class="material-icons" style="font-size: 40px;">group_add </i>
+                        Creer les equipe
+                        </button>
+                    </td>
+                </tr>
+                <br>
+                <div *ngIf="testCr()" class="alert alert-danger">
+                    
+                    <strong>Erreur</strong> impossible de creer les equipe nbr : -{{monHack.capacite}}
+                </div>
+                <br>
+                <div *ngIf="testCr()" class="alert alert-danger">
+                    <strong>Erreur</strong> impossible de creer les equipe nbr : -{{monHack.capacite}}
+                </div>
+            </table>
+            <div *ngIf="testB()" class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Well done!</strong> You successfully read this important alert message.
+            </div>
+        
+        </div>
+       
+    </div>
+</div>
+<div class="container" *ngIf="testB()" >
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Well done!</strong> You successfully read this important alert message.
+    </div>
+</div>
+<div style="height: 300px;">
+
+</div>

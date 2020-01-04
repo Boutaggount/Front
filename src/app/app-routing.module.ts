@@ -10,12 +10,8 @@ import {TestComponent} from'./test/test.component'
 import {GererEquipesComponent} from './gerer-equipes/gerer-equipes.component'
 import {MonTestComponent} from './mon-test/mon-test.component'
 import {StatistiquesComponent} from './statistiques/statistiques.component'
+import { MesEventComponent } from './mes-event/mes-event.component';
 
-
-<<<<<<< HEAD
-=======
-import { StatistiquesComponent } from './statistiques/statistiques.component';
->>>>>>> fb8b63f433ed406069b67718c0852333325de31d
 
 
 
@@ -30,7 +26,8 @@ const routes: Routes = [
   {path:'test',component:DialogExComponent},
   {path:'gererEquipes',component:GererEquipesComponent},
   {path:'mm',component:TestComponent},
-  {path:'tt',component:MonTestComponent}
+  {path:'tt',component:MonTestComponent},
+  {path:'MesEvent',component:MesEventComponent}
  
 ];
 
