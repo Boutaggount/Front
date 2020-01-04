@@ -47,14 +47,10 @@ import { ChartsModule } from 'ng2-charts';
     TestComponent,
     MonTestComponent,
     GererEquipesComponent,
-<<<<<<< HEAD
-    StatistiquesComponent
+    StatistiquesComponent,
     
-=======
     IndexComponent,
-    TestComponent,
-    StatistiquesComponent
->>>>>>> fb8b63f433ed406069b67718c0852333325de31d
+    TestComponent
   ],
   entryComponents:[
     NewMembreComponent,
