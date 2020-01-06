@@ -38,6 +38,7 @@ export class MesEventComponent implements OnInit {
 
   VoirAv(d: number) {
     this.testBC=0;
+    this.testC=0;
     this.testGE = 0;
     this.testP = 0;
     this.testD = d;
@@ -119,12 +120,13 @@ export class MesEventComponent implements OnInit {
         this._serv.update(this.monHack)
       }
     );
-  }
-  this.testP = 0
+    this.testP = 0
   this.testGE = 0
   this.testC=0
   this.testD=0
   this.testBC=1;
+  }
+
 
 }
 
@@ -167,11 +169,13 @@ export class MesEventComponent implements OnInit {
 
   makeName(): string {
     let nom: string='';
-    let equips: string []= ["AAAA","BBBB","CCCC","DDDD","EEEE","FFFF","GGGG","QQQQ","WWWW","RRRR","TTTT","YYYY","UUUU"]
+    let equips: string []= ["Noire","Rouge","Vert","blanche","jaune","Bleu","Marrone","Gris"]
     var randomNumber = Math.floor(Math.random()*equips.length);
+    equips.splice(randomNumber,1);
     nom=equips[randomNumber];
     return nom;
   }
+  
 
   gerermembers(): string {
 

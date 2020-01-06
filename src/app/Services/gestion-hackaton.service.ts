@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material';
 export class GestionHackatonService {
   private baseUrl: String = 'http://localhost:8090/evenements/';
   private Hackatons: Hackaton;
+  private bienDemnd=false;
 
 
   getHck() {
@@ -79,8 +80,22 @@ export class GestionHackatonService {
   }
   
   listmembers(id: Number){
-    console.log("llll")
+  
     return this._http.get(this.baseUrl + 'listmembers/'+id);
   }
+  mesDemandes(id: Number){
+    return this._http.get(this.baseUrl + 'mesDemandes/'+id);
+  }
+
+
+  demande(){
+    this.bienDemnd=true;
+  }
+  dedemande(){
+    this.bienDemnd=false;
+  }
+  testDemande(){
+    return this.bienDemnd
+    }
 
 }

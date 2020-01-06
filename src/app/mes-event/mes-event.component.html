@@ -137,8 +137,8 @@
                     <tbody>
                         <tr *ngFor="let mem of members">
                             <td>{{mem.login}}</td>
-                            <td>Dfrr</td>
-                            <td>test@example.com</td>
+                            <td>{{mem.prenom}}</td>
+                            <td>{{mem.email}}</td>
                         </tr>
 
                     </tbody>
@@ -176,9 +176,7 @@
                     <strong>Erreur</strong> impossible de creer les equipe nbr : -{{monHack.capacite}}
                 </div>
                 <br>
-                <div *ngIf="testCr()" class="alert alert-danger">
-                    <strong>Erreur</strong> impossible de creer les equipe nbr : -{{monHack.capacite}}
-                </div>
+                
             </table>
             <div *ngIf="testB()" class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -189,12 +187,7 @@
        
     </div>
 </div>
-<div class="container" *ngIf="testB()" >
-    <div class="alert alert-success alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <strong>Well done!</strong> You successfully read this important alert message.
-    </div>
-</div>
+
 <div style="height: 300px;">
 
 </div>

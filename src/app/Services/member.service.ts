@@ -7,9 +7,15 @@ import { Router } from '@angular/router';
 })
 export class MemberService {
   private baseUrl: String = 'http://localhost:8090/membres/';
-  private members: Membre;
+  private membre: Membre;
 
   constructor(private _http: HttpClient, private _router: Router) { }
+setMembre(m:Membre){
+  this.membre=m;
+}
+getMembre(){
+return this.membre;
+}
 
   getAll() {
     return this._http.get(this.baseUrl + 'all');

@@ -11,12 +11,10 @@ import {GererEquipesComponent} from './gerer-equipes/gerer-equipes.component'
 import {MonTestComponent} from './mon-test/mon-test.component'
 import {StatistiquesComponent} from './statistiques/statistiques.component'
 import { MesEventComponent } from './mes-event/mes-event.component';
+import { DemandeComponent } from './demande/demande.component';
+import { MesDemandsComponent } from './mes-demands/mes-demands.component';
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f97842e2099ab5ad427e07975a4db3708629d5e7
 
 
 const routes: Routes = [
@@ -31,7 +29,12 @@ const routes: Routes = [
   {path:'gererEquipes',component:GererEquipesComponent},
   {path:'mm',component:TestComponent},
   {path:'tt',component:MonTestComponent},
-  {path:'MesEvent',component:MesEventComponent}
+  {path:'MesEvent',component:MesEventComponent},
+  {path:'Demande',component:DemandeComponent},
+  {path:'mesDemands',component:MesDemandsComponent}
+  
+
+  
  
 ];
 

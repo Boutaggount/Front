@@ -61,12 +61,16 @@ export class ListEventsComponent implements OnInit {
     }
   }
   affDet(a:Hackaton){
+    this._serv.dedemande();
     this._serv.setHack(a);
     sessionStorage.setItem('id_hack',a.id.toString());
     this.dialog.open(DetaillComponent,{
       
     
     });
+  }
+  demandeEff(){
+    return this._serv.testDemande()
   }
 
 }

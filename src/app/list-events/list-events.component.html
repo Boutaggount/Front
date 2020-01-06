@@ -1,6 +1,13 @@
+<div class="head">
 
+</div>
 <h2 style="text-align:center">Touts les evenement</h2>
-
+<div class="container">
+<div class="alert alert-success alert-dismissable" *ngIf="demandeEff()">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <strong>Success!</strong> bien participer
+</div>
+</div>
 <table>
   <tr>
     <td>

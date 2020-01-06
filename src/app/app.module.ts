@@ -30,6 +30,10 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
 import { ChartsModule } from 'ng2-charts';
 import { MesEventComponent } from './mes-event/mes-event.component';
+import { DemandeComponent } from './demande/demande.component';
+import { MesDemandsComponent } from './mes-demands/mes-demands.component';
+import { DemandeService } from './Services/demande.service';
+import { DetaillDemandeComponent } from './detaill-demande/detaill-demande.component';
 
 @NgModule({
   declarations: [
@@ -48,24 +52,18 @@ import { MesEventComponent } from './mes-event/mes-event.component';
     TestComponent,
     MonTestComponent,
     GererEquipesComponent,
-<<<<<<< HEAD
     StatistiquesComponent,
-    
-    IndexComponent,
-    TestComponent
-=======
- 
-    
-    IndexComponent,
-    TestComponent,
-    StatistiquesComponent,
-    MesEventComponent
->>>>>>> f97842e2099ab5ad427e07975a4db3708629d5e7
+    MesEventComponent,
+    DemandeComponent,
+    MesDemandsComponent,
+    DetaillDemandeComponent
   ],
   entryComponents:[
     NewMembreComponent,
     AuthentificationComponent,
-    UpdateEventComponent
+    UpdateEventComponent,
+    DetaillDemandeComponent
+
   ],
   imports: [
     MatDialogModule,
@@ -80,7 +78,7 @@ import { MesEventComponent } from './mes-event/mes-event.component';
     ChartsModule,
     FullCalendarModule
   ],
-  providers: [GestionHackatonService,MemberService,AuthentificationService,AdminService],
+  providers: [GestionHackatonService,MemberService,AuthentificationService,AdminService,DemandeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

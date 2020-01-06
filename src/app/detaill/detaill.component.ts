@@ -22,13 +22,7 @@ export class DetaillComponent implements OnInit {
 
   ngOnInit() {
     this.tab=this._serv.getHck();
-    /*
-    this._serv.getId().subscribe(
-      (data: Hackaton) => {
-        this.tab = data;
-      }
-    );
-    */
+
   }
   update() {
     this._serv.setHack(this.tab);
@@ -55,9 +49,11 @@ export class DetaillComponent implements OnInit {
       let b = sessionStorage.getItem('id_membre');
       this._serv.ispart(b,a).subscribe(x=>{
         if(x)
-         {alert("vous avez")}
+         {alert("vous avez déja pqrticiper")}
           else
-          {this._serv.participer(b,a);}
+          {this._router.navigate(["Demande"])
+            this.dialog.closeAll();    
+        }
       });   
       
       

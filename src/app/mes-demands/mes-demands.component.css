@@ -1,0 +1,10 @@
+.head{
+	background-image: url("../../assets/60.jpg");
+	height: 200px;
+}
+tbody{font-size: 16px;background-color: transparent;}
+.thead{background-color: #1A1A1A;font-size: 18px; color: white;font-weight:normal;}
+.btnS{float: right;background-color: hotpink;border: none;color: white;padding: 5px 15px;text-align: left;font-size: 14px;}
+.btnS:focus{outline:none;}
+.btnS:after {content: "Less";float: right;margin-left: 3px;}
+.btnS.collapsed:after {content: "More";}
