@@ -50,14 +50,14 @@
             </div >
                 <br><br>
                 <div *ngIf="isAdmin()==false">
-                <button type="button" (click)="participer()" class="btn btn-lg btn-block  btn-custom ">participer</button>
+                <button type="button" (click)="participer()" class="btn btn-lg btn-block  btn-custom ">Participer</button>
               </div>
             </div>
         </div>
     </div>
 
 <div *ngIf="getV()==true">
-    <h2 style="align-items: center;">Modification d'un  Hackathone</h2>
+    <h2 style="align-items: center;">Modification d'un hackaton</h2>
 
 <div class="row">
   <div class="col-75">
@@ -65,7 +65,7 @@
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="row">
           <div class="col-50">
-            <h3>Les information d'événement </h3>
+            <h3>Les informations du hackaton </h3>
             <label for="fname"><i class="fa fa-user"></i> intitule</label>
             <input [(ngModel)]="tab.intitule" type="text" id="fname" name="intitule" placeholder="intitule" >
             <label  for="email"><i class="fa fa-envelope"></i> Description</label>
@@ -88,7 +88,7 @@
           </div>
 
           <div class="col-50">
-            <h3>Les information du lieu</h3>
+            <h3>Les informations sur le lieu</h3>
             
             <div class="icon-container">
               <i class="fa fa-cc-visa" style="color:navy;"></i>
@@ -100,13 +100,13 @@
             <input [(ngModel)]="tab.ville"  type="text" id="cname" name="Ville" placeholder="Ville"  >
             <label for="ccnum">Etablisement</label>
             <input  [(ngModel)]="tab.etablisement" type="text" id="ccnum" name="Etablisement" placeholder="Etablisement" >
-            <label for="expmonth">address</label>
+            <label for="expmonth">addresse</label>
             <input [(ngModel)]="tab.address" type="text" id="expmonth" name="address" placeholder="address">
             
           </div>
           
         </div>
-                <input type="submit" value="Entregistrer" class="btn">
+                <input type="submit" value="Enregistrer" class="btn">
       </form>
     </div>
    

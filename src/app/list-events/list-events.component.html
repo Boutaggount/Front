@@ -1,11 +1,11 @@
 <div class="head">
 
 </div>
-<h2 style="text-align:center">Touts les evenement</h2>
+<h2 style="text-align:center">Tous les hackatons</h2>
 <div class="container">
 <div class="alert alert-success alert-dismissable" *ngIf="demandeEff()">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-  <strong>Success!</strong> bien participer
+  <strong>Félicitations !</strong>Demande de participation effectuée
 </div>
 </div>
 <table>
@@ -13,7 +13,7 @@
     <td>
         <div class="form-inline my-2 my-lg-0"> 
             <input [(ngModel)]="Rville" class="form-control mr-sm-2" type="text" placeholder="chercher par ville" aria-label="Search"/>
-            <button value="filter" class="btn btn-outline-success my-2 my-sm-0" (click)="chercherVille()">recherche</button>
+            <button value="filter" class="btn btn-outline-success my-2 my-sm-0" (click)="chercherVille()">Recherche</button>
           </div>
     </td>
     <td>
@@ -22,7 +22,7 @@
     <td>
         <div class="form-inline my-2 my-lg-0"> 
             <input [(ngModel)]="Rtheme" class="form-control mr-sm-2" type="text" placeholder="chercher par theme" aria-label="Search"/>
-            <button value="filter" class="btn btn-outline-success my-2 my-sm-0" (click)="chercherTheme()">recherche</button>
+            <button value="filter" class="btn btn-outline-success my-2 my-sm-0" (click)="chercherTheme()">Recherche</button>
           </div>
     </td>
   </tr>
@@ -34,7 +34,7 @@
           <h1>{{a.intitule}}</h1>
           <p class="price">{{a.ville}}</p>
           <p>{{a.description}}</p>
-          <p><button (click)="affDet(a)">plus de Detail</button></p>
+          <p><button (click)="affDet(a)">Details</button></p>
         </div>
 </div>
 

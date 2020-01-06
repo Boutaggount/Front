@@ -8,19 +8,19 @@
             <thead>
                 <tr>
                     <th class="text-center">
-                        intitule
+                        Intitulé
                     </th>
                     <th class="text-center">
-                        description
+                        Description
                     </th>
                     <th class="text-center">
-                        theme
+                        Theme
                     </th>
                     <th class="text-center">
-                        date_debut
+                       Date Début
                     </th>
                     <th class="text-center">
-                        ville
+                        Ville
                     </th>
 
                     <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
@@ -47,7 +47,7 @@
                     <td data-name="del" style="width: 150px;">
                         <button (click)="VoirAv(a.id)" name="del0"
                             class='btn btn-danger glyphicon glyphicon-remove row-remove'><span
-                                aria-hidden="true">Avencemet des participation</span></button>
+                                aria-hidden="true">Voir avancement </span></button>
                     </td>
                 </tr>
             </tbody>
@@ -60,7 +60,7 @@
             <table>
                 <tr>
                     <td style="width: 250px;">
-                        Avencement des participation
+                        Avancement des participations
                     </td>
                     <td style="width: 800px;">
                         <div class="col-md-12">
@@ -90,7 +90,7 @@
                 </td>
                 <td style="width: 40px;"></td>
                 <td>
-                    <button (click)="gestionEquipe()" class="themeBtn4">gestion des equipes</button>
+                    <button (click)="gestionEquipe()" class="themeBtn4">gestion des équipes</button>
                 </td>
             </tr>
         </table>
@@ -102,16 +102,16 @@
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" style="margin-left: 36%;">
             <div class="price-table pt-bg-blue">
                 <div>
-                    <span>List des members</span>
+                    <span>Liste des participants</span>
 
                 </div>
                 <ul>
-                    <li *ngFor="let mem of members">{{mem.login}}</li>
+                    <li *ngFor="let mem of members"><b>{{mem.nom}}</b> {{mem.prenom}}</li>
                 </ul>
             </div>
 
         </div>
-
+ 
     </div>
 </div>
 
@@ -131,7 +131,7 @@
                         <tr>
                             <th>Nom</th>
                             <th>Prenom</th>
-                            <th>mail</th>
+                            <th>Email</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -157,7 +157,7 @@
                 <tr>
                     <td style="width: 1300px;">
                         <div class="alert alert-info ">
-                            <strong>Info :</strong> les equipes ne sont pas encore Creer
+                            <strong>Informations :</strong> les équipes ne sont pas encore Crées !
                         </div>
                     </td>
                     <td style="width: 200px;">
@@ -166,21 +166,21 @@
                     <td>
                         <button mat-button (click)="Creer()" >
                         <i class="material-icons" style="font-size: 40px;">group_add </i>
-                        Creer les equipe
+                        Création des équipes 
                         </button>
                     </td>
                 </tr>
                 <br>
                 <div *ngIf="testCr()" class="alert alert-danger">
                     
-                    <strong>Erreur</strong> impossible de creer les equipe nbr : -{{monHack.capacite}}
+                    <strong>Erreur</strong> Impossible de creer les équipes nbr : -{{monHack.capacite}}
                 </div>
                 <br>
                 
             </table>
             <div *ngIf="testB()" class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong>Well done!</strong> You successfully read this important alert message.
+                <strong>Félicitations</strong> Création des équipes réussite.
             </div>
         
         </div>

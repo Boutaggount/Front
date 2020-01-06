@@ -24,7 +24,7 @@ import { NewMembreComponent } from './new-membre/new-membre.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { TestComponent } from './test/test.component';
 import { MonTestComponent } from './mon-test/mon-test.component';
-import { GererEquipesComponent } from './gerer-equipes/gerer-equipes.component';
+
 
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
@@ -51,7 +51,6 @@ import { DetaillDemandeComponent } from './detaill-demande/detaill-demande.compo
     UpdateEventComponent,
     TestComponent,
     MonTestComponent,
-    GererEquipesComponent,
     StatistiquesComponent,
     MesEventComponent,
     DemandeComponent,

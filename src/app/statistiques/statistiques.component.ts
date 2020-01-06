@@ -11,6 +11,10 @@ export class StatistiquesComponent implements OnInit{
   hackathons:string[]=  []
   nbMembersH:number[] = []
   nbMemebersF:number[] = []
+  nbHackaton:number
+  nbParticipant:number
+  nbEquipe:number
+  nbDemande:number
 
   constructor(private _serviceHackathons:GestionHackatonService) { }
 
@@ -39,6 +43,8 @@ export class StatistiquesComponent implements OnInit{
         this._serviceHackathons.getNbMembersH().subscribe(
           (response:number[])=>{
             this.nbMembersH = response;
+
+       
             //nombre femmes
         this._serviceHackathons.getNbMembersF().subscribe(
           (response:number[])=>{
@@ -56,7 +62,31 @@ export class StatistiquesComponent implements OnInit{
         
       }
     );
-    
+  
+         //nombre hackaton
+         this._serviceHackathons.getNbHackatons().subscribe(
+          (response:number)=>{
+            this.nbHackaton= response;
+          });
+
+          //nombre Participants
+         this._serviceHackathons.getNbPArticipants().subscribe(
+          (response:number)=>{
+            this.nbParticipant= response;
+          });
+
+          //nombre equipe
+         this._serviceHackathons.getNbEquipe().subscribe(
+          (response:number)=>{
+            this.nbEquipe= response;
+          });
+
+           //nombre demande
+         this._serviceHackathons.getNbDemande().subscribe(
+          (response:number)=>{
+            this.nbDemande= response;
+          });
   }
+
 
 }

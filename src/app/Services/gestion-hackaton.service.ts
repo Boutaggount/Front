@@ -35,6 +35,22 @@ export class GestionHackatonService {
   getNbMembersF(){
     return this._http.get(this.baseUrl + 'nbMemebersF');
   }
+  getNbHackatons(){
+    return this._http.get(this.baseUrl + 'nbHackaton');
+  }
+
+  getNbEquipe(){
+    return this._http.get(this.baseUrl + 'nbEquipe');
+  }
+
+  getNbDemande(){
+    return this._http.get(this.baseUrl + 'nbDemande');
+  }
+
+
+  getNbPArticipants(){
+    return this._http.get(this.baseUrl + 'nbParticipants');
+  }
   add(hack: Hackaton) {
     
     this._http.post(this.baseUrl + 'save', JSON.parse(JSON.stringify(hack))

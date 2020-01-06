@@ -8,19 +8,19 @@
             <thead>
                 <tr>
                     <th class="text-center">
-                        intitule
+                        Intitulé
                     </th>
                     <th class="text-center">
-                        description
+                        Description
                     </th>
                     <th class="text-center">
-                        theme
+                        Theme
                     </th>
                     <th class="text-center">
-                        date_debut
+                        Date début
                     </th>
                     <th class="text-center">
-                        ville
+                        Ville
                     </th>
 
                     <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
@@ -47,7 +47,7 @@
                     <td data-name="del" style="width: 150px;">
                         <button  name="del0" (click)="voireDemanes(a.id)"
                             class='btn btn-danger glyphicon glyphicon-remove row-remove'>
-                            <span aria-hidden="true">List des demande</span>
+                            <span aria-hidden="true">Liste des demandes</span>
                         </button>
                     </td>
                 </tr>
@@ -63,21 +63,21 @@
           <tr>
             <th>Nom</th>
             <th>Prenom</th>
-            <th>email</th>
-            <th>num</th>
+            <th>Email</th>
+            <th>Numéro</th>
             <th>#</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let m of members ">
-            <td>{{m.login}}</td>
-            <td>Lifna</td>
-            <td>23</td>
-            <td>Female</td>
+            <td>{{m.nom}}</td>
+            <td>{{m.prenom}}</td>
+            <td>{{m.email}}</td>
+            <td>{{m.num}}</td>
             <td>
                 <button mat-button (click)="gererDemande(m.id_mem,m.nom,m.prenom,m.email)" >
                     <i class="material-icons" style="font-size: 40px;">reorder </i>
-                    <b>Plus d'infos</b> 
+                    <b>Plus d'informations</b> 
                 </button>
                 
             </td>
